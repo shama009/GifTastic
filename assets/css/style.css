@@ -1,0 +1,34 @@
+body {
+    background-image: url("../images/bg.png");
+    color: white;
+    margin: 10px 20px;
+}
+.giphys {
+    width: 300px;
+    height: 200px;
+    margin: 5px;
+}
+#user-input {
+    margin-top: 5px;
+}
+#submit {
+    margin-top: 10px;
+}
+.button-container {
+    padding:10px;
+    margin:10px;
+}
+#input-form {
+    float: right;
+    margin-right: 80px; 
+}
+.giphy-btn {
+    margin:5px;
+    padding:8px;
+    border-radius: 8px;
+    background: teal;
+    color: white;
+}
+#content{
+    width:800px;
+}

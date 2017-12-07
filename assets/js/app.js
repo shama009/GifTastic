@@ -1,6 +1,6 @@
 
-$(document).ready(function(){
-  
+$(document).ready(function () {
+
     //HmC6jYxAxwhp61bde8FJ2MDSN2VdTQ0h
     // my API key - XW2Cj4MK2064FaM505lDN0FeIqr4b5tJ
     var apiKey = 'XW2Cj4MK2064FaM505lDN0FeIqr4b5tJ';
@@ -15,7 +15,7 @@ $(document).ready(function(){
 
         // clear out any previous images on the page when there is a new search happening
         $("#content").empty();
-        
+
         // we retrieve gifs matching the value they inputed
         // sample url: https://api.giphy.com/v1/gifs/search?api_key=XW2Cj4MK2064FaM505lDN0FeIqr4b5tJ&q=minions&limit=10&offset=0&rating=G&lang=en
         var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&q=" + input + "&limit=10&offset=0&lang=en";
@@ -23,12 +23,18 @@ $(document).ready(function(){
             url: queryURL,
             method: 'GET'
         }).done(function (response) {
-            console.log("response: "+response);
+            console.log("response: " + response);
             var data = response.data;
             for (var i = 0; i < data.length; i++) {
                 // display a list of gifs
                 var newImg = $("<img>");
                 newImg.attr("src", data[i].images.downsized.url);
+                newImg.addClass("giphys");
+                newImg.attr("data-state", "still");
+                // include all required attributes to animate and pause images
+                // <img src="https://media3.giphy.com/media/W6LbnBigDe4ZG/200_s.gif" data-still="https://media3.giphy.com/media/W6LbnBigDe4ZG/200_s.gif"
+                // data-animate="https://media3.giphy.com/media/W6LbnBigDe4ZG/200.gif" data-state="still" class="gif">
+
                 $("#content").append(newImg);
             }
         });
@@ -37,6 +43,7 @@ $(document).ready(function(){
 
     // when the user finishes searching
     // make a new button for them to click on later
+
     function makeUserSearchButtons(input) {
         var newBtn = $("<button>");
         newBtn.addClass("giphy-btn");
