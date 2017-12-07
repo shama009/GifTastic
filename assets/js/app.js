@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    // Example queryURL for Giphy API
+  
     //HmC6jYxAxwhp61bde8FJ2MDSN2VdTQ0h
     // my API key - XW2Cj4MK2064FaM505lDN0FeIqr4b5tJ
     var apiKey = 'XW2Cj4MK2064FaM505lDN0FeIqr4b5tJ';
