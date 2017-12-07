@@ -3,7 +3,7 @@ body {
     color: white;
     margin: 10px 20px;
 }
-.giphys {
+.giphy-img {
     width: 300px;
     height: 200px;
     margin: 5px;
@@ -29,6 +29,13 @@ body {
     background: teal;
     color: white;
 }
-#content{
+.gif-div{
+   float: left;
+}
+#content {
     width:800px;
+    margin-left: 20px;
+}
+p{
+    margin-left: 12px;
 }
