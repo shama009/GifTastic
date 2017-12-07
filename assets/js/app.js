@@ -29,19 +29,19 @@ $(document).ready(function () {
                 // display a list of gifs and ratings
                 var gifDiv = $("<div class='gif-div'>");
                 var newImg = $("<img>");
-                var url =data[i].images.downsized.url;
+                var url = data[i].images.downsized.url;
                 var splitUrl = url.split(".gif");
-                var stillUrl=splitUrl[0]+"_s.gif";
+                var stillUrl = splitUrl[0] + "_s.gif";
                 console.log(stillUrl);
                 // include all required attributes to animate and pause images
                 newImg.attr("src", stillUrl);
                 newImg.addClass("giphy-img");
-                newImg.attr("data-still",stillUrl);
-                newImg.attr("data-animate",url);
+                newImg.attr("data-still", stillUrl);
+                newImg.attr("data-animate", url);
                 newImg.attr("data-state", "still");
-                
+
                 var rating = data[i].rating;
-                gifDiv.append("<p>Rating: "+rating);
+                gifDiv.append("<p>Rating: " + rating);
                 gifDiv.append(newImg);
                 $("#content").append(gifDiv);
             }
@@ -74,21 +74,21 @@ $(document).ready(function () {
 
     // when the user dynamically generated giphy button
     $(document).on("click", ".giphy-btn", getGiphies);
-    $(document).on("click", ".giphy-img", function(){
+    $(document).on("click", ".giphy-img", function () {
         var state = $(this).attr("data-state");
         if (state === "still") {
             var src = $(this).attr("src");
             var dataAnimate = $(this).attr("data-animate");
             $(this).attr("src", dataAnimate);
             $(this).attr("data-state", "animate");
-    
-          } else {
+
+        } else {
             var src = $(this).attr("src");
             var dataStill = $(this).attr("data-still");
             $(this).attr("src", dataStill);
             $(this).attr("data-state", "still");
-    
-          }
-    
+
+        }
+
     });
 });
