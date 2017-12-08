@@ -22,7 +22,10 @@ body {
     float: right;
     margin-right: 80px; 
 }
-.giphy-btn {
+#user-input {
+    padding:10px;
+}
+button {
     margin:5px;
     padding:8px;
     border-radius: 8px;
