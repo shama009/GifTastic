@@ -3,6 +3,9 @@ body {
     color: white;
     margin: 10px 20px;
 }
+header {
+    margin-left: 30px;
+}
 .giphy-img {
     width: 300px;
     height: 200px;
