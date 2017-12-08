@@ -7,4 +7,4 @@
  6. Duplicate buttons are not allowed.
  7. Default value is set for empty input.
 
-  HTML, CSS, Javascript, jQuery, Ajax, GIPHY API are used to build the project
+  Note: HTML, CSS, Javascript, jQuery, Ajax, GIPHY API are used to build the project
